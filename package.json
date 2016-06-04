@@ -1,0 +1,34 @@
+{
+	"name": "MVC_79",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": ""
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"gulp": "latest",
+		"gulp-coffee": "latest",
+		"gulp-clean-css": "latest",
+		"gulp-plumber": "latest",
+		"gulp-rename": "latest",
+		"gulp-stylus": "latest",
+		"gulp-uglify": "latest",
+		"gulp-util": "latest",
+		"browser-sync": "latest",
+		"jasmine-core": "latest",
+		"karma": "latest",
+		"karma-chrome-launcher": "latest",
+		"karma-coffee-preprocessor": "latest",
+		"karma-jasmine": "latest",
+		"nib": "latest"
+	},
+	"dependencies": {
+		"body-parser": "latest",
+		"cookie-parser": "latest",
+		"express": "latest",
+		"pug": "latest"
+	}
+}

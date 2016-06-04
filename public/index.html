@@ -1,0 +1,382 @@
+<?php
+	require ("layout/head.html");
+?>
+
+<div class="wrapper">
+	<section class="clearfix" id="main">
+		<div class="content">
+			<div id="head">
+				<div id="logo">
+					<img src="img/logo.png">
+					<h3>
+						<?php
+							if(isset($_GET['city'])){
+								$city = $_GET['city'];
+								if (!preg_match('//u', $city)) {
+    							$city = iconv("cp1251","UTF-8",$city);
+								}
+								echo $city;
+							} else{
+								echo 'Москва и область';
+							}
+						?>
+					</h3>
+				</div>
+				<nav>
+					<a href="#price">Цены</a>
+					<a href="#video">Видео</a>
+					<a href="#photo">Фото</a>
+					<a href="#feedback">Отзывы</a>
+					<a href="#about">Обо мне</a>
+					<a href="#bonus">Бонус</a>
+				</nav>
+				<div id="phone">
+					<a href="#footer"><img src="img/phone.png"></a>
+				</div>
+			</div>
+			<h1>
+				Отпразднуйте свадьбу на высшем уровне
+			</h1>
+			<div class="form">
+				<form method="post" id="phoneForm1" > 
+					<input required="required" id="phone1" class="inputPhone" maxlength="20" type="text" placeholder="Введите номер телефона"/>
+					<input class="sendPhone" type="submit" value="Бесплатная консультация"/>
+				</form>
+				<div id="caution">
+						<p>Данные нужны лишь для связи с Вами</p>
+						<img src="img/protected.png">
+				</div>
+				<hr />
+			</div>
+			<div id="mainFeedback">
+				<img src="img/stars.png">
+				<p>«Почувствовали профессионализм с 1-й минуты знакомства: планирование и обозначение всех основных моментов - очень важно и успокаивающе действует перед свадьбой.»</p>
+				<div id="author">
+					Татьяна Парубаймех
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="clearfix" id="about">
+		<div class="content">
+			<div id="cards">
+				<div class="card">
+					<img src="img/rings.png">
+					<h3>5<span>лет</span></h3>
+					<p>В свадебном бизнесе</p>
+				</div>
+				<hr/>
+				<div class="card" id="card2">
+					<img src="img/team.png">
+					<h3>101</h3>
+					<p>нестандартных креативных подрядчиков-партнеров</p>
+				</div>
+				<hr/>
+				<div class="card" id="card3">
+					<img src="img/hands.png">
+					<h3>300</h3>
+					<p>довольных клиентов</p>
+				</div>
+			</div>
+			<div id="selfInfo">
+				<h2>информация к размышлению:</h2>
+				 <p>Ведущий мероприятий со значительным опытом организатора и сценариста. <br/>Характер не нордический, стойки микрофона - лучшие друзья. <br/>Вооружен большим количеством авторских и популярных решений. <br/>Общителен, в меру лиричен. <br/>Стихи не читает, шарики лопать не заставляет. <br/> Беспощаден к врагам буйного веселья. <br/>Отмечен многочисленными благодарностями молодоженов.</p>
+			</div>
+		</div>	
+	</section>
+	<section class="clearfix" id="price">
+		<div class="content">
+			<h1>
+				Выберите свою цену
+			</h1>
+				<div class="priceCard">
+					<h2>
+						Ведущий
+					</h2>
+					<div class="price">
+						15 900 <span>"</span>
+					</div>
+					<ul>
+						<li>
+							Проведение свадьбы
+						</li>
+						<li>
+							Подготовка и написание савдебного сценария
+						</li>
+						<li>
+							Консультация и организация свадьбы
+						</li>
+					</ul>
+					<a onclick="show('#popPhone')">До <span>60</span> гостей</a>
+				</div>
+				<div class="priceCard">
+					<h2>
+						Ведущий + Dj
+					</h2>
+					<div class="price">
+						25 900 <span>"</span>
+					</div>
+					<ul>
+						<li>
+							Проведение свадьбы + Dj
+						</li>
+						<li>
+							Подготовка и написание савдебного сценария
+						</li>
+						<li>
+							Консультация и организация свадьбы
+						</li>
+						<li>
+							Комплект звукового и светового оборудования
+						</li>
+					</ul>
+					<a onclick="show('#popPhone')">До <span>70</span> гостей</a>
+				</div>
+				<div class="priceCard">
+					<h2>
+						Бинго!
+						<img src="img/crown.png">
+					</h2>
+					<div class="price">
+						39 500 <span>"</span>
+					</div>
+					<ul>
+					<li>
+						Проведение свадьбы + Dj
+					</li>
+					<li>
+						Консультации по подбору места проведения
+					</li>
+					<li>
+						Увеличенный комплект звукового <br/>
+						и светового оборудования
+					</li>
+					<li>
+						VIP набор для церемонии семейного очага
+					</li>
+					<li>
+						Песочная церемония в подарок
+					</li>
+					<li>
+						Дым машина.
+					</li>
+					</ul>
+					<a onclick="show('#popPhone')">Более <span>70</span> гостей</a>
+				</div>
+		</div>
+	</section>
+	<section class="clearfix" id="video">
+		<div class="content">
+			<h1>
+				Свадьба - отдых, а не работа,
+			</h1>
+			<h2>
+				за счет того, что я уже написал <span>50</span> подробных сценариев свадеб, <br/>которые прошли «как по нотам»!
+			</h2>
+			<iframe width="870" height="456" src="https://www.youtube.com/embed/q63-lmzrrOs" frameborder="0" allowfullscreen>
+			</iframe>
+			<iframe width="870" height="456" src="https://www.youtube.com/embed/-u7lZeMy3Xc" frameborder="0" allowfullscreen>
+			</iframe>
+			<iframe width="870" height="456" src="https://www.youtube.com/embed/hNqVL27PkM8" frameborder="0" allowfullscreen>
+			</iframe>
+		</div>
+	</section>
+	<section class="clearfix" id="photo">
+		<div class="content">
+			<h1>
+				Вы решите вопрос наполнения развлекательной части
+			</h1>
+			<h2>
+				за счет моей богатой программы с более <span>100</span> авторских и популярных решений
+			</h2>
+			<div id="owl-gallery" class="owl-carousel">
+				<div>
+					<img src="img/gallery/center.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right01.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right02.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right03.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right04.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right05.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right06.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right07.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right1.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right2.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right3.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right4.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right6.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right7.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right8.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right9.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/right10.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left1.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left2.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left3.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left4.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left5.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left6.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left7.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left8.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left9.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left10.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left11.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left12.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left13.jpg">
+				</div>
+				<div>
+					<img src="img/gallery/left14.jpg">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="clearfix" id="me">
+		<div class="content">
+
+			<div id="holiday">
+
+				<h1>
+					Я провожу искренние свадьбы<br/>со вкусом любви, юмора,<br/>такта и музыкальности.
+				</h1>
+				<h2>
+					Со мной удобно:
+					<img src="img/gamak.png">
+				</h2>
+				<ul>
+					<li>
+						Полноценно и вовремя выполняю все подготовительные работы
+					</li>
+					<li>
+						У меня есть договоры и все официальные бумаги
+					</li>
+					<li>
+						Я всегда он-лайн
+					</li>
+				</ul>
+				<div>
+					Ваш праздник <br/>	Вам понравится
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="clearfix" id="feedback">
+		<div class="content">
+			<h1>
+				Отзывы и впечатления
+			</h1>
+			<a id="leave_fb" onclick="show('#popFeedback')">Оставить отзыв</a>
+			<div class="feedback">
+				<div class="cd-testimonials-wrapper cd-container">
+					<ul class="cd-testimonials">
+							<?php
+								require ("layout/feedback.html");
+							?>			
+					</ul> <!-- cd-testimonials -->
+					</div> <!-- cd-testimonials-wrapper -->
+			</div>
+			<div id="bonus">
+				<div id="discount">
+					<?php
+						require ("layout/discount.html")
+					?>
+			</div>
+		</div>
+	</section>
+	<section class="clearfix" id="footer">
+		<div class="content">
+			<div id="footerWrap">
+				<h1>
+					Способы связи:
+				</h1>
+				<div id="phoneNumber">
+				+7 968 594 1984
+				<img src="img/phone2.png">
+				</div>
+				<div id="vk">
+					<a href="http://www.vk.com/myemcee">vk.com/myemcee</a> 
+					<img src="img/vk.png">
+				</div>
+				<div class="form">
+					<form method="post" id="phoneForm2" name="formPhone">
+					<input required="required" id="phone2" class="inputPhone" maxlength="20" type="text" name="phone" placeholder="Введите номер телефона"/>
+					<input class="sendPhone" type="submit" value="Бесплатная консультация" />
+					</form>
+
+					<div id="caution">
+						<p>Данные нужны лишь для связи с Вами</p>
+						<img src="img/protected.png">
+					</div>
+				</div>
+				<img id="logo2" src="img/logo2.png">
+				<div id="policy">
+				<img src="img/lock.png">
+				Политика конфидециальности
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<?php
+	require ("layout/popup.html")
+?>
+
+<?php
+	require ("layout/foot.html")
+?>
