@@ -6,28 +6,3 @@ html,
 body {
   min-height: 100%;
 }
-body {
-  background: url("../img/back.jpg");
-  background-position: center center;
-  overflow: hidden;
-  color: #fff;
-}
-.row {
-  padding-top: 10px;
-}
-.btn {
-  width: 5em;
-}
-textarea.form-control {
-  height: 80px;
-}
-p.output {
-  width: 200px;
-  height: 80px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background: #fff;
-  padding: 0px 10px;
-  overflow: auto;
-  color: #000;
-}
